@@ -9,7 +9,30 @@
 </head>
 <body>
     <h1>Solar Calculator</h1>
-    <div class="container"></div>
+    <div class="calculator">
+        <div class="form">
+            <form>
+                <label for="energy-consumption">Energy Consumption (kWh):</label><br>
+                <input type="number" id="energy-consumption"><br>
+                <br>
+                <label for="panel-size">Panel Size (watts):</label><br>
+                <div class="radio-buttons">
+                    <div class="inputGroup">
+                        <label for="125watts">125 watts</label>
+                        <input type="radio" id="125watts" name="power" checked value="125">
+                    </div>
+                    <div class="inputGroup">
+                        <label for="180watts">180 watts</label>
+                        <input type="radio" id="180watts" name="power" value="180">
+                    </div>
+                </div>
+                <button type="submit">Calculate</button>
+            </form> 
+        </div>
+        <div class="result">
+            <p class="answer"></p>
+        </div>
+    </div> 
     <script src="script.js"></script>
 </body>
 </html>
