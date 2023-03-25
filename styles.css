@@ -19,7 +19,7 @@ body{
 .about{
   position: absolute;
   background-color: #0000006d;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   width: 80%;
   top: 6rem;
@@ -41,7 +41,7 @@ h1{
     height: 50vh;
 }
 form {
-    width: 300px;
+    width: 20rem;
     margin: 0 auto;
     text-align: center;
     background-color: white;
@@ -92,7 +92,7 @@ form {
   }
 
   .result {
-    width: 300px;
+    width: 20rem;
     margin: 0 auto;
     text-align: center;
     background-color: white;
@@ -116,7 +116,16 @@ form {
 
   .table{
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.2rem;
+  }
+
+  .table h2{
+    text-align: center;
+    color: white;
+    padding-top: 2rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.405);
   }
 
   table {
