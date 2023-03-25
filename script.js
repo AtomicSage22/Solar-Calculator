@@ -16,5 +16,15 @@ document.querySelector("form").addEventListener("submit", (e) => {
     let chargingTime = batteryCalc(houseload.value, backUpTime, batteryDcVolt)/10;
     let solarCurrent = chargingTime + inverterCalc(houseload.value);  
     let solarPower = solarCurrent * 14;
-    document.querySelector(".answer").textContent = Math.ceil(solarPower/document.querySelector('input[name="power"]:checked').value);
+    let powerVariant = document.querySelector('input[name="power"]:checked').value;
+    document.querySelector(".answer").textContent = `Number of solar panels: ${Math.ceil(solarPower/powerVariant)}`;
+    if(powerVariant == 125)
+    {
+        document.querySelector(".area").textContent = `Area required: ${(Math.ceil(solarPower/powerVariant))*8}m/sq`;
+    }
+    else if(powerVariant == 180){
+        document.querySelector(".area").textContent = `Area required: ${((Math.ceil(solarPower/powerVariant))*5.56).toFixed(2)}m/sq`;
+    }
+    document.querySelector(".price").textContent = `Approx price: ${(solarPower*22.2).toFixed(2)}`;
+    console.log(solarPower);
 })
