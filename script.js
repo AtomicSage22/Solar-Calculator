@@ -20,10 +20,10 @@ document.querySelector("form").addEventListener("submit", (e) => {
     document.querySelector(".answer").textContent = `Number of solar panels: ${Math.ceil(solarPower/powerVariant)}`;
     if(powerVariant == 125)
     {
-        document.querySelector(".area").textContent = `Area required: ${(Math.ceil(solarPower/powerVariant))*8}m/sq`;
+        document.querySelector(".area").textContent = `Area required: ${(Math.ceil(solarPower/powerVariant))*0.743}m/sq`;
     }
     else if(powerVariant == 180){
-        document.querySelector(".area").textContent = `Area required: ${((Math.ceil(solarPower/powerVariant))*5.56).toFixed(2)}m/sq`;
+        document.querySelector(".area").textContent = `Area required: ${((Math.ceil(solarPower/powerVariant))*3.23).toFixed(2)}m/sq`;
     }
     document.querySelector(".price").textContent = `Approx price: ${(solarPower*22.2).toFixed(2)}`;
     console.log(solarPower);
